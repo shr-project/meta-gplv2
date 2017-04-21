@@ -26,7 +26,6 @@ SRC_URI = "${GNU_MIRROR}/coreutils/${BP}.tar.bz2 \
            file://coreutils-fix-texinfo.patch \
            file://fix_for_manpage_building.patch \
            file://loadavg.patch \
-           file://no-man.patch \
            "
 
 SRC_URI[md5sum] = "c9607d8495f16e98906e7ed2d9751a06"
@@ -37,7 +36,7 @@ EXTRA_OECONF += "ac_cv_func_getgroups_works=yes \
 
 # acl is not a default feature
 #
-PACKAGECONFIG ??= "${@bb.utils.filter('DISTRO_FEATURES', 'acl', d)}"
+PACKAGECONFIG ??= "${@bb.utils.contains('DISTRO_FEATURES', 'acl', 'acl', '', d)}"
 
 # with, without, depends, rdepends
 #
@@ -100,9 +99,9 @@ ALTERNATIVE_LINK_NAME[lbracket] = "${bindir}/["
 ALTERNATIVE_TARGET[lbracket] = "${bindir}/lbracket.${BPN}"
 
 python __anonymous() {
-	for prog in d.getVar('base_bindir_progs').split():
-		d.setVarFlag('ALTERNATIVE_LINK_NAME', prog, '%s/%s' % (d.getVar('base_bindir'), prog))
+	for prog in d.getVar('base_bindir_progs', True).split():
+		d.setVarFlag('ALTERNATIVE_LINK_NAME', prog, '%s/%s' % (d.getVar('base_bindir', True), prog))
 
-	for prog in d.getVar('sbindir_progs').split():
-		d.setVarFlag('ALTERNATIVE_LINK_NAME', prog, '%s/%s' % (d.getVar('sbindir'), prog))
+	for prog in d.getVar('sbindir_progs', True).split():
+		d.setVarFlag('ALTERNATIVE_LINK_NAME', prog, '%s/%s' % (d.getVar('sbindir', True), prog))
 }
