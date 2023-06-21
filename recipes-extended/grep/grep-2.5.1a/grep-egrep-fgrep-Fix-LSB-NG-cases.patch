@@ -7,7 +7,7 @@ The LSB core test requires grep egrep and fgrep can
 perform pattern matching in searches without regard
 to case if -i option is specified.
 
-Upstream-Status: backport.
+Upstream-Status: Backport
 
 Signed-off-by: Li Xin <lixin.fnst@cn.fujitsu.com>
 ---

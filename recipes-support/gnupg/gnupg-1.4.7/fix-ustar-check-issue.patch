@@ -1,7 +1,7 @@
 Remove the code for ustar format detection because it is not applicable
 for cross-complie platform.
 
-Upstream Status: Inappropriate [embedded specific]
+Upstream-Status: Inappropriate [embedded specific]
 
 Signed-off-by: Wenlin Kang <wenlin.kang@windriver.com>
 Signed-off-by: Yi Zhao <yi.zhao@windriver.com>
