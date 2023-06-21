@@ -4,6 +4,8 @@ Date: Fri, 8 Dec 2017 07:56:58 +0700
 Subject: [PATCH] gettext libgrep fix compile error -Werror=format-security
 
 ---
+Upstream-Status: Pending
+
  gettext-tools/libgrep/m-fgrep.c |  4 ++--
  gettext-tools/libgrep/m-regex.c | 12 ++++++------
  2 files changed, 8 insertions(+), 8 deletions(-)

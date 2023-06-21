@@ -1,3 +1,5 @@
+Upstream-Status: Pending
+
 Fixes to allow diffutils to build with gcc v6.
 
 RP
