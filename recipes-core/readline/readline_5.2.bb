@@ -31,6 +31,8 @@ SRC_URI = "${GNU_MIRROR}/readline/${BPN}-${PV}.tar.gz;name=archive \
            file://config-dirent-symbols.patch \
            file://fix-redundant-rpath.patch"
 
+ERROR_QA:remove = "patch-status"
+
 SRC_URI[archive.md5sum] = "e39331f32ad14009b9ff49cc10c5e751"
 SRC_URI[archive.sha256sum] = "12e88d96aee2cd1192500356f0535540db499282ca7f76339fb4228c31249f45"
 
