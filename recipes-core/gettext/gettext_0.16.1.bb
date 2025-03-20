@@ -115,3 +115,7 @@ do_install:append:class-native () {
 SYSROOT_DIRS_IGNORE += "${datadir}/aclocal"
 
 BBCLASSEXTEND = "native nativesdk"
+
+# http://gecko.lge.com:8000/Errors/Details/1139829
+# gettext-0.16.1/gettext-runtime/intl/dcigettext.c:162:7: error: conflicting types for 'getcwd'; have 'char *(void)'
+CFLAGS += "-std=gnu17"

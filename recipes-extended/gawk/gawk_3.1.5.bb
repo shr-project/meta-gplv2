@@ -42,3 +42,7 @@ do_install:append() {
 	# remove the link since we don't package it
 	rm ${D}${bindir}/awk
 }
+
+# http://gecko.lge.com:8000/Errors/Details/1139831
+# gawk-3.1.5/missing_d/strtod.c:39:15: error: conflicting types for 'atof'; have 'double(void)'
+CFLAGS += "-std=gnu17"

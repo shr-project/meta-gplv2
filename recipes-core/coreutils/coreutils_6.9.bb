@@ -107,3 +107,7 @@ python __anonymous() {
     for prog in d.getVar('sbindir_progs').split():
         d.setVarFlag('ALTERNATIVE_LINK_NAME', prog, '%s/%s' % (d.getVar('sbindir'), prog))
 }
+
+# http://gecko.lge.com:8000/Errors/Details/1139830
+# config.h:53:22: error: too many arguments to function 'usage'; expected 0, have 1
+CFLAGS += "-std=gnu17"

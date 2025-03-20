@@ -84,3 +84,7 @@ do_install:append () {
 }
 
 BBCLASSEXTEND = "native nativesdk"
+
+# http://gecko.lge.com:8000/Errors/Details/1139823
+# readline-5.2/histlib.h:55:14: error: conflicting types for 'strchr'; have 'char *(void)'
+CFLAGS += "-std=gnu17"
