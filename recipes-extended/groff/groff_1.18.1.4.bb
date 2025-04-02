@@ -20,7 +20,7 @@ SRC_URI = "${GNU_MIRROR}/${BPN}/old/${BP}.tar.gz \
 
 inherit autotools texinfo
 
-EXTRA_OECONF="--without-x --prefix=${D} --exec-prefix=${D} --bindir=${D}${bindir} --datadir=${D}${datadir} --mandir=${D}${datadir}/man --infodir=${D}${datadir}info --with-appresdir=${D}${datadir}"
+EXTRA_OECONF = "--without-x --prefix=${D} --exec-prefix=${D} --bindir=${D}${bindir} --datadir=${D}${datadir} --mandir=${D}${datadir}/man --infodir=${D}${datadir}info --with-appresdir=${D}${datadir}"
 
 SRC_URI[md5sum] = "ceecb81533936d251ed015f40e5f7287"
 SRC_URI[sha256sum] = "ff3c7c3b6cae5e8cc5062a144de5eff0022e8e970e1774529cc2d5dde46ce50d"

@@ -15,6 +15,6 @@ do_install:append() {
 	install -m 0644 ${WORKDIR}/rsyncd.conf ${D}${sysconfdir}
 }
 
-EXTRA_OEMAKE='STRIP=""'
+EXTRA_OEMAKE = 'STRIP=""'
 
 PACKAGECONFIG[ipv6] = "--enable-ipv6,--disable-ipv6,"
