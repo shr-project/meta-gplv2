@@ -65,7 +65,7 @@ bindir_progs = "base64 basename cksum comm csplit cut dir dircolors dirname du \
 base_bindir_progs = "cat chgrp chmod chown cp date dd echo false kill ln ls mkdir \
                      mknod mv pwd rm rmdir sleep stty sync touch true uname hostname stat"
 
-sbindir_progs= "chroot"
+sbindir_progs = "chroot"
 
 # Let aclocal use the relative path for the m4 file rather than the
 # absolute since coreutils has a lot of m4 files, otherwise there might
